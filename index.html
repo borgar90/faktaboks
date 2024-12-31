@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Søknadsoppgave Varden</title>
+    
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/fakta.css">
+</head>
+<body>
+    <header>
+        <h1>Faktaboks av Borgar Flaen Stensrud</h1>
+    </header>
+
+    <nav style="width:100%;">
+        <a href="#">Hjem</a>
+        <a href="news.html">Se i nyhetsartikkel</a>
+    </nav>
+
+    <div class="content" style="display: flex; flex-direction: column; align-items: center; gap:20px;">
+      
+      <div class="btns">
+        <a href="news.html"> <span class="btn"><i class="searchIcon"></i> Se i nyhetsartikkel</span></a>
+      </div>
+      <!-- Placeholder for the dynamic widget -->
+      <div id="widget-placeholder"></div>
+
+    </div>
+
+    <script src="js/widget.js"></script>
+    <script>
+        function loadFactBox(containerId) {
+        const container = document.getElementById(containerId);
+
+        if (!container) {
+            console.error(`Container with ID "${containerId}" not found.`);
+            return;
+        }
+        createPriceWidget(containerId);
+        }
+
+        // Automatically run on DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', () => {
+            loadFactBox('widget-placeholder');
+        });
+    </script>
+</body>
+</html>

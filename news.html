@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyheter</title>
+    
+    <link rel="stylesheet" href="css/newspaper.css">
+    <link rel="stylesheet" href="css/fakta.css">
+</head>
+<body>
+    <header>
+        <h1>Nyheter fra Norge og Verden</h1>
+    </header>
+
+    <nav style="width:100%;">
+        <a href="index.html">Hjem</a>
+        <a href="news.html">Se i nyhetsartikkel</a>
+    </nav>
+
+    <div class="content">
+        <!-- Main Article -->
+        <div class="article">
+            <h1>Boligmarkedet i Fokus: Hva du må vite om prisendringene</h1>
+            <img src="img/bolig.jpg" alt="Real estate market">
+            <p>
+                Det norske boligmarkedet har vært gjennom store svingninger de siste årene. Med stigende renter og en ustabil økonomi,
+                ser vi nå en nedgang i prisene i mange deler av landet.
+            </p>
+            <p>
+                Flere faktorer bidrar til denne utviklingen, inkludert en økning i antall boliger på markedet,
+                høyere rente på boliglån, og en generell usikkerhet i den globale økonomien.
+            </p>
+
+             <!-- Placeholder for the dynamic widget -->
+             <div id="widget-placeholder"></div>
+
+            <img src="img/graph.jpg" alt="City view">
+            <p>
+                For førstegangskjøpere kan dette være en god nyhet, da lavere priser betyr lavere inngangsbarrierer. Samtidig
+                kan det være en utfordring for selgere som prøver å få mest mulig ut av sine investeringer.
+            </p>
+            <p>
+                Ifølge eiendomsmegler Hans Andersen: "Markedet er ustabilt, men vi forventer en viss stabilisering i løpet
+                av de neste månedene. For kjøpere er dette et ideelt tidspunkt å handle på."
+            </p>
+        </div>
+
+        <!-- Sidebar with Links -->
+        <aside class="links">
+            <div class="featured-articles">
+                <h2>Utvalgte Artikler</h2>
+                <a href="#" class="article-link">
+                    <img src="img/down.jpg" alt="Oslo skyline">
+                    <div>
+                        <h3>Boligprisene i Oslo faller – Hva betyr det for deg?</h3>
+                        <p>En dypere analyse av boligmarkedets utvikling.</p>
+                    </div>
+                </a>
+                <a href="#" class="article-link">
+                    <img src="img/tec.webp" alt="Technology">
+                    <div>
+                        <h3>Topp 5 Teknologitrender å Følge i 2024</h3>
+                        <p>Hva du bør vite for å holde deg oppdatert.</p>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Other Articles Section -->
+            <div class="articles" style="margin-top: 20px;">
+                <h2>Nyeste Artikler</h2>
+                <a href="#" class="article-link">
+                    <img src="img/skog.jpg" alt="Norwegian forest">
+                    <div>
+                        <h3>Hvordan Klimaendringer Påvirker Norske Skoger</h3>
+                        <p>Skogene våre står i fare – Hva kan vi gjøre?</p>
+                    </div>
+                </a>
+                <a href="#" class="article-link">
+                    <img src="img/innovasjon.png" alt="Innovation">
+                    <div>
+                        <h3>Innovasjon i Norge: Startups som Endrer Spillet</h3>
+                        <p>De mest spennende startupene akkurat nå.</p>
+                    </div>
+                </a>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nyheter AS. Alle rettigheter reservert.</p>
+    </footer>
+    <script src="js/widget.js"></script>
+    <script>
+        function loadFactBox(containerId) {
+        const container = document.getElementById(containerId);
+
+        if (!container) {
+            console.error(`Container with ID "${containerId}" not found.`);
+            return;
+        }
+        createPriceWidget(containerId);
+        }
+
+        // Automatically run on DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', () => {
+            loadFactBox('widget-placeholder');
+        });
+    </script>
+</body>
+</html>
