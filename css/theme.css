@@ -42,7 +42,7 @@ nav a:hover {
 .content {
   display: flex;
   flex: 1;
-  max-width: 100%;
+  max-width: 95%;
   margin: 20px auto;
   flex-direction: row;
   justify-content: space-between;
